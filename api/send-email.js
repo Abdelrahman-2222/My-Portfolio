@@ -19,13 +19,14 @@ const transporter = nodemailer.createTransport({
 
 
 
-  const mailOptions = {
-    from: `"${name}" <a.hossam.z.a@gmail.com>`,
-    replyTo: email,
-    to: "a.hossam.z.a@gmail.com",
-    subject,
-    text: message,
-  };
+const mailOptions = {
+  from: `"${name}" <a.hossam.z.a@gmail.com>`,
+  replyTo: email,
+  to: "a.hossam.z.a@gmail.com",
+  subject,
+  text: `From: ${name} <${email}>\n\n${message}`,
+};
+
 
   try {
     await transporter.sendMail(mailOptions);
