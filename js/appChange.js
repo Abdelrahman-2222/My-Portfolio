@@ -106,3 +106,11 @@ function displayMessage(msg, type) {
   // Simple inline alert logic (you can style this as needed)
   alert(`${type.toUpperCase()}: ${msg}`);
 }
+
+
+// CV
+    // Set your CV file name here
+    const cvFileName = "Abdelrahman H. Atta CV.pdf";
+    document.querySelectorAll('.cv-link').forEach(link => {
+        link.href = cvFileName;
+    });
