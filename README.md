@@ -28,7 +28,7 @@ Interests: Backend Development, AI, Data Science
 How to Reach Me 📫
 Feel free to connect with me:
 
-Email: abdelrahmanhossam2222@gmail.com
-LinkedIn: https://www.linkedin.com/in/abdelrahman-atta-66980a135/
+Email: a.hossam.z.a@gmail.com
+LinkedIn: https://www.linkedin.com/in/abdelrahman-h-atta/
 GitHub: https://github.com/Abdelrahman-2222
 Thank you for exploring my portfolio! I'm always open to feedback and collaboration. 🚀
