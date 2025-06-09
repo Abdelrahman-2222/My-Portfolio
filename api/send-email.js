@@ -10,14 +10,13 @@ export default async function handler(req, res) {
   const { name, email, subject, message } = req.body;
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  service: "gmail",
   auth: {
     user: "a.hossam.z.a@gmail.com",
     pass: process.env.GMAIL_APP_PASSWORD,
   },
 });
+
 
 
   const mailOptions = {
