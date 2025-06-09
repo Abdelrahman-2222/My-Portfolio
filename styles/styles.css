@@ -519,6 +519,32 @@ header {
   justify-content: flex-start;
 }
 
+.message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #ff3333;
+  border: 1px solid #ff3333;
+}
+
+.success {
+  background-color: rgba(0, 128, 0, 0.2);
+  color: #00cc00;
+  border: 1px solid #00cc00;
+}
+
+.info {
+  background-color: rgba(0, 0, 255, 0.2);
+  color: #3333ff;
+  border: 1px solid #3333ff;
+}
+
 /*Independed components*/
 .btn-con {
   display: flex;

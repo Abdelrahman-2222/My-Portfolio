@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-email-server",
+  "version": "1.0.0",
+  "description": "Email server for portfolio contact form",
+  "dependencies": {
+    "nodemailer": "^6.9.1"
+  }
+}
