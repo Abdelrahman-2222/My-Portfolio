@@ -1,6 +1,5 @@
 // api/send-email.js
-
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -9,30 +8,28 @@ export default async function handler(req, res) {
 
   const { name, email, subject, message } = req.body;
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "a.hossam.z.a@gmail.com",
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "a.hossam.z.a@gmail.com",
+      pass: process.env.GMAIL_APP_PASSWORD,
+    },
+  });
 
-
-
-const mailOptions = {
-  from: `"${name}" <a.hossam.z.a@gmail.com>`,
-  replyTo: email,
-  to: "a.hossam.z.a@gmail.com",
-  subject,
-  text: `From: ${name} <${email}>\n\n${message}`,
-};
-
+  const mailOptions = {
+    from: `"${name}" <a.hossam.z.a@gmail.com>`,
+    replyTo: email,
+    to: "a.hossam.z.a@gmail.com",
+    subject,
+    text: `From: ${name} <${email}>\n\n${message}`,
+  };
 
   try {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
-  console.error("Error sending email:", error.response || error);
-  return res.status(500).json({ error: "Failed to send email", details: error.message || error.toString() });
+    console.error("Error sending email:", error.response || error);
+    return res.status(500).json({ error: "Failed to send email", details: error.message || error.toString() });
+  }
 }
-}
+

@@ -1,8 +1,12 @@
 {
   "name": "portfolio-email-server",
   "version": "1.0.0",
+  "type": "module",
   "description": "Email server for portfolio contact form",
   "dependencies": {
     "nodemailer": "^6.9.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

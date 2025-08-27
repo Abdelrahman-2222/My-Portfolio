@@ -1,10 +1,1 @@
-{
-  "functions": {
-    "api/location.js": {
-      "runtime": "edge"
-    },
-    "api/send-email.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
-}
+{}

@@ -1,17 +1,14 @@
-export default function handler(request) {
-  const country = request.geo?.country || 'INTERNATIONAL';
+export default function handler(req, res) {
+  const country = req.headers['x-vercel-ip-country'] || 'INTERNATIONAL';
   
   // Determine if user is from Egypt or international
   const region = country === 'EG' ? 'EG' : 'INTERNATIONAL';
   
-  return new Response(JSON.stringify({ country, region }), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-      'Set-Cookie': [
-        `user-country=${country}; Path=/; Max-Age=86400; SameSite=Lax`,
-        `user-region=${region}; Path=/; Max-Age=86400; SameSite=Lax`
-      ]
-    }
-  });
+  // Set cookies
+  res.setHeader('Set-Cookie', [
+    `user-country=${country}; Path=/; Max-Age=86400; SameSite=Lax`,
+    `user-region=${region}; Path=/; Max-Age=86400; SameSite=Lax`
+  ]);
+  
+  res.status(200).json({ country, region });
 }
