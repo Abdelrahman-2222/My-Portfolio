@@ -41,7 +41,7 @@
                         <script>
                             let typed = new Typed(".typeJsS", {
                                 strings: [
-                                    `Hi, I'm Abdelrahman Hossam Eldin`,
+                                    `Hi, I'm Abdelrahman H. Atta`,
                                 ],
                                 typeSpeed: 30,
                                 backSpeed: 40,
@@ -90,7 +90,7 @@
                         <div class="left-about">
                             <h4>Information About me</h4>
                             <p style="text-align: justify;">
-                                My name is Abdelrahman Hossam Eldin, and I am a passionate software engineer.
+                                My name is Abdelrahman H. Atta, and I am a passionate software engineer.
                                 I am deepening my expertise in the .NET framework, focusing on Object-Oriented
                                 Programming (OOP),
                                 SOLID principles, and writing clean, maintainable code. With hands-on experience
@@ -282,7 +282,7 @@
                                     <div class="progress-bar">
                                         <p class="prog-title">.Net</p>
                                         <div class="progress-con">
-                                            <p class="prog-text">Learning</p>
+                                            <p class="prog-text">85%</p>
                                             <div class="progress">
                                                 <span class=".Net"></span>
                                             </div>
@@ -310,7 +310,7 @@
                                 <i class="fas fa-briefcase"></i>
                             </div>
                             <p class="t1-duration">Full Stack .NET (ICC) Programm</p>
-                            <h5> Software engineer <span> Information Technology International - ITI </span></h5>
+                            <h5> Software engineer <span> Information Technology Institute - ITI </span></h5>
                             <p>
                                 Developing robust applications using C#, ASP.NET Core, Entity Framework,
                                 and SQL Server, with hands-on experience in full-stack .NET web development—including
@@ -346,74 +346,162 @@
             <!--Start Container-->
             <div class="container">
 
-                <!--Start Main Row-->
-                <div class="row">
-                    <!--Start First Coloumn-->
-                    <div class="col-lg-4 col-md-6">
+                <!-- Portfolio Carousel -->
+                <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
 
-                        <!--Start Potfolio-item - 1-->
-                        <div class="portfolio-item">
-                            <div class="image">
-                                <img src="img/port1.jpg" alt="" />
-                            </div>
-                            <div class="hover-items">
-                                <h3>Project Source</h3>
-                                <div class="icons">
-                                    <a href="https://cardio-vision.netlify.app/" target="_blank" class="icon">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators custom-indicators">
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+
+                    <!-- Carousel Inner -->
+                    <div class="carousel-inner">
+
+                        <!-- First Slide - Projects 1-3 -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <!-- Project 1: Akelny -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="portfolio-item">
+                                        <div class="image">
+                                            <img src="img/port1.jpg" alt="Akelny Frontend Project" />
+                                        </div>
+                                        <div class="hover-items">
+                                            <h3>Akelny Frontend</h3>
+                                            <p>Restaurant Management System</p>
+                                            <div class="icons">
+                                                <a href="https://akelny-front.vercel.app/" target="_blank" class="icon">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 2: Cardio Vision -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="portfolio-item">
+                                        <div class="image">
+                                            <img src="img/port2.jpg" alt="Cardio Vision Project" />
+                                        </div>
+                                        <div class="hover-items">
+                                            <h3>Cardio Vision</h3>
+                                            <p>Medical Imaging Application</p>
+                                            <div class="icons">
+                                                <a href="https://cardio-vision.netlify.app/" target="_blank"
+                                                    class="icon">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 3: Exam System -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="portfolio-item">
+                                        <div class="image">
+                                            <img src="img/port3.jpg" alt="Exam System Project" />
+                                        </div>
+                                        <div class="hover-items">
+                                            <h3>Exam System</h3>
+                                            <p>Educational Assessment Platform</p>
+                                            <div class="icons">
+                                                <a href="https://ahmedabdeen15.github.io/Exam-System/" target="_blank"
+                                                    class="icon">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--End Potfolio-item - 1 -->
-                    </div>
-                    <!--End First-coloumn-->
 
-                    <!--Start Second Coloumn-->
-                    <div class="col-lg-4 col-md-6">
-                        <!--Start Potfolio-item - 2 -->
-                        <div class="portfolio-item">
-                            <div class="image">
-                                <img src="img/port2.jpg" alt="" />
-                            </div>
-                            <div class="hover-items">
-                                <h3>Project Source</h3>
-                                <div class="icons">
-                                    <a href="https://abdelrahman-2222.github.io/Bootstrap_template_1/" target="_blank"
-                                        class="icon">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
+                        <!-- Second Slide - Projects 4-6 -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <!-- Project 4: Pet Adoption -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="portfolio-item">
+                                        <div class="image">
+                                            <img src="img/port4.jpg" alt="Pet Adoption Platform" />
+                                        </div>
+                                        <div class="hover-items">
+                                            <h3>Pet Adoption</h3>
+                                            <p>Animal Welfare Platform</p>
+                                            <div class="icons">
+                                                <a href="https://abdelrahman-2222.github.io/pet-adoption-platform/"
+                                                    target="_blank" class="icon">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 5: Future Processing Blog -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="portfolio-item">
+                                        <div class="image">
+                                            <img src="img/port5.jpg" alt="Future Processing Blog" />
+                                        </div>
+                                        <div class="hover-items">
+                                            <h3>Processing Blog</h3>
+                                            <p>Tech Blog Platform</p>
+                                            <div class="icons">
+                                                <a href="https://abdelrahman-2222.github.io/future-processing-blog/"
+                                                    target="_blank" class="icon">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 6: Bootstrap Template -->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="portfolio-item">
+                                        <div class="image">
+                                            <img src="img/port6.jpg" alt="Bootstrap Template" />
+                                        </div>
+                                        <div class="hover-items">
+                                            <h3>Bootstrap Template</h3>
+                                            <p>Responsive Web Template</p>
+                                            <div class="icons">
+                                                <a href="https://abdelrahman-2222.github.io/Bootstrap_template_1/"
+                                                    target="_blank" class="icon">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--End Potfolio-item - 2 -->
                     </div>
-                    <!--End Second-coloumn-->
 
-                    <!--Start Third-coloumn-->
-                    <div class="col-lg-4 col-md-6">
-                        <!--Start Potfolio-item - 3 -->
-                        <div class="portfolio-item">
-                            <div class="image">
-                                <img src="img/port3.jpg" alt="" />
-                            </div>
-                            <div class="hover-items">
-                                <h3>Project Source</h3>
-                                <div class="icons">
-                                    <a href="https://abdelrahman-2222.github.io/simpleWebPage/" target="_blank"
-                                        class="icon">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Potfolio-item - 3 -->
-                    </div>
-                    <!--End Third-coloumn-->
-
-
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev custom-control" type="button"
+                        data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                        <span class="custom-prev-icon" aria-hidden="true">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next custom-control" type="button"
+                        data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                        <span class="custom-next-icon" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <!--End Main Row-->
+                <!-- End Portfolio Carousel -->
+
             </div>
             <!--End Container-->
 

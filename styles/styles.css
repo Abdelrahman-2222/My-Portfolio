@@ -357,21 +357,106 @@ header {
   text-align: center;
 }
 
+/* Custom Portfolio Carousel Styles */
+#portfolioCarousel {
+  margin: 2rem 0;
+}
+
+#portfolioCarousel .custom-indicators {
+  position: relative;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+#portfolioCarousel .custom-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-secondary);
+  background-color: transparent;
+  margin: 0 8px;
+  transition: var(--tr);
+}
+
+#portfolioCarousel .custom-indicators button.active,
+#portfolioCarousel .custom-indicators button:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.2);
+}
+
+#portfolioCarousel .custom-control {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-grey-4);
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--tr);
+  opacity: 0.8;
+}
+
+#portfolioCarousel .custom-control:hover {
+  background-color: var(--color-secondary);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#portfolioCarousel .custom-control:hover i {
+  color: var(--color-white);
+}
+
+#portfolioCarousel .custom-control.carousel-control-prev {
+  left: -30px;
+}
+
+#portfolioCarousel .custom-control.carousel-control-next {
+  right: -30px;
+}
+
+#portfolioCarousel .custom-control .custom-prev-icon i,
+#portfolioCarousel .custom-control .custom-next-icon i {
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  transition: var(--tr);
+}
+
+#portfolioCarousel .carousel-item {
+  padding: 0 40px;
+  transition: transform 0.6s ease-in-out;
+}
+
 .container .portfolio-item {
   position: relative;
   border-radius: 15px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-1);
+  transition: var(--tr);
 }
+
+.container .portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 .container .portfolio-item img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
+  transition: var(--tr);
 }
+
 .container .portfolio-item .hover-items {
   width: 100%;
   height: 100%;
-  background-color: var(--color-secondary);
+  background-color: rgba(39, 174, 96, 0.95);
   position: absolute;
   left: 0;
   top: 0;
@@ -384,36 +469,54 @@ header {
   transform: scale(0);
   transition: all 0.4s ease-in-out;
 }
+
 .container .portfolio-item .hover-items h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container .portfolio-item .hover-items p {
+  font-size: 1rem;
   color: var(--color-white);
   margin-bottom: 1.5rem;
+  text-align: center;
+  opacity: 0.9;
 }
+
 .container .portfolio-item .hover-items .icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .container .portfolio-item .hover-items .icons .icon {
   background-color: var(--color-primary);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 1rem;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  border: 2px solid transparent;
 }
+
 .container .portfolio-item .hover-items .icons .icon i {
   font-size: 1.5rem;
   color: var(--color-white);
-  margin: 0 1rem;
 }
+
 .container .portfolio-item .hover-items .icons .icon:hover {
   background-color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  transform: scale(1.1);
 }
+
 .container .portfolio-item .hover-items .icons .icon:hover i {
   color: var(--color-primary);
 }
@@ -727,6 +830,57 @@ footer {
   form {
     margin-left: -55px;
   }
+  
+  /* Portfolio Carousel Mobile Styles */
+  #portfolioCarousel .carousel-item {
+    padding: 0 10px;
+  }
+  
+  #portfolioCarousel .custom-control {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #portfolioCarousel .custom-control.carousel-control-prev {
+    left: -10px;
+  }
+  
+  #portfolioCarousel .custom-control.carousel-control-next {
+    right: -10px;
+  }
+  
+  #portfolioCarousel .custom-control .custom-prev-icon i,
+  #portfolioCarousel .custom-control .custom-next-icon i {
+    font-size: 1rem;
+  }
+  
+  #portfolioCarousel .custom-indicators button {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .portfolio-item .hover-items h3 {
+    font-size: 1.4rem;
+  }
+  
+  .portfolio-item .hover-items p {
+    font-size: 0.9rem;
+  }
+  
+  .portfolio-item .hover-items .icons .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .portfolio-item .hover-items .icons .icon i {
+    font-size: 1.2rem;
+  }
+  
   @-webkit-keyframes fadeInRight {
     0% {
       opacity: 0;
