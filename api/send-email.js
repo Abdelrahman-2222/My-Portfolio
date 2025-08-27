@@ -1,4 +1,3 @@
-// api/send-email.js
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
@@ -8,18 +7,27 @@ export default async function handler(req, res) {
 
   const { name, email, subject, message } = req.body;
 
+  // Check if environment variable is set
+  if (!process.env.GMAIL_APP_PASSWORD) {
+    console.error("GMAIL_APP_PASSWORD environment variable is not set");
+    return res.status(500).json({ 
+      error: "Server configuration error", 
+      details: "Email service not properly configured" 
+    });
+  }
+
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "a.hossam.z.a@gmail.com",
+      user: "abdelrahmanhossam2222@gmail.com",
       pass: process.env.GMAIL_APP_PASSWORD,
     },
   });
 
   const mailOptions = {
-    from: `"${name}" <a.hossam.z.a@gmail.com>`,
+    from: `"${name}" <abdelrahmanhossam2222@gmail.com>`,
     replyTo: email,
-    to: "a.hossam.z.a@gmail.com",
+    to: "abdelrahmanhossam2222@gmail.com",
     subject,
     text: `From: ${name} <${email}>\n\n${message}`,
   };
