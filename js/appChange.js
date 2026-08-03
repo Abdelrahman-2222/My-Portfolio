@@ -62,8 +62,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function displayMessage(msg, type) {
-  // Simple inline alert logic (you can style this as needed)
-  alert(`${type.toUpperCase()}: ${msg}`);
+    // 1. Find the container we added to the HTML
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    // 2. Create the toast element
+    const toast = document.createElement('div');
+    toast.className = `toast-message toast-${type}`;
+    
+    // 3. Add an icon based on the message type (using FontAwesome which you already have)
+    let icon = '';
+    if (type === 'success') icon = '<i class="fa-solid fa-circle-check"></i>';
+    if (type === 'error') icon = '<i class="fa-solid fa-circle-exclamation"></i>';
+    if (type === 'info') icon = '<i class="fa-solid fa-circle-info"></i>';
+
+    // 4. Inject the HTML into the toast
+    toast.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 12px;">
+            ${icon}
+            <span>${msg}</span>
+        </div>
+    `;
+
+    // 5. Add the toast to the screen
+    container.appendChild(toast);
+
+    // 6. Automatically remove the toast after 4 seconds
+    setTimeout(() => {
+        toast.classList.add('fade-out');
+        // Wait for the fade-out animation to finish before removing from DOM
+        toast.addEventListener('animationend', () => {
+            toast.remove();
+        });
+    }, 4000);
 }
 
 
@@ -78,7 +109,7 @@ function getCookie(name) {
 function setCVLinks(region) {
   let cvFileName;
 
-  if (region === "EG") {
+  if (region === "EG") {displayMessage
     // Egyptian CV - for users accessing from Egypt
     cvFileName = "https://drive.google.com/file/d/1bqFnxH0GFhKA_jcCCd7t3zXwJvgayzh4/view?usp=sharing";
   } else {
