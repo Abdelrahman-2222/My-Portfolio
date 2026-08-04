@@ -5,15 +5,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Abdelrahman H. Atta</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Abdelrahman H. Atta | Backend .NET Engineer & Technical Analyst</title>
+    <meta name="title" content="Abdelrahman H. Atta | Backend .NET Engineer & Technical Analyst" />
+    <meta name="description" content="Portfolio of Abdelrahman H. Atta - Software Engineer specializing in scalable .NET backend architecture, enterprise ERP/HRMS systems, RESTful API design, and technical business analysis." />
+    <meta name="author" content="Abdelrahman H. Atta" />
+    <meta name="keywords" content="Software Engineer, Backend Developer, .NET Core, C#, Entity Framework, SQL Server, Business Analyst, Technical Product Manager, Solutions Architect, Cairo, Egypt" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdelrahman-atta.vercel.app/" />
+    <meta property="og:title" content="Abdelrahman H. Atta | Backend .NET Engineer & Technical Analyst" />
+    <meta property="og:description" content="Enterprise Backend Architecture, System Design, RESTful APIs, and Technical Business Analysis." />
+    <meta property="og:image" content="img/resized49_408x612-removebg-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Abdelrahman H. Atta | Backend .NET Engineer" />
+    <meta property="twitter:description" content="Backend .NET Developer & Technical Analyst specializing in enterprise system architecture." />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/all.min.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&family=Open+Sans:wght@400;700&family=Poppins:ital@1&family=Redressed&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body class="main-content">
@@ -32,7 +52,7 @@
                 </div>
 
                 <!--Second Column-->
-                <div class=" col-lg-6 col-md-5 col-sm-12">
+                <div class="col-lg-6 col-md-5 col-sm-12">
                     <div class="right-header position-relative pt-5 mt-5 pb-5">
                         <h1 class="fa-4x">
                             <span class="typeJsS"></span>
@@ -41,24 +61,31 @@
                         <script>
                             let typed = new Typed(".typeJsS", {
                                 strings: [
-                                    `Hi, I'm Abdelrahman H. Atta`,
+                                    "Abdelrahman H. Atta",
+                                    "Backend .NET Engineer",
+                                    "Software Systems Engineer",
+                                    "Technical Product Analyst"
                                 ],
-                                typeSpeed: 30,
-                                backSpeed: 40,
+                                typeSpeed: 50,
+                                backSpeed: 30,
                                 loop: true,
-                                loopCount: 3,
-                                startDelay: -10,
-                                backDelay: 0,
-                                fadeOut: true,
+                                startDelay: 100,
+                                backDelay: 3000,
+                                fadeOut: false,
+                                contentType: "text"
                             });
                         </script>
-                        <p class="text-light-50 lh-lg" style="text-align: justify;">
-                            Software Engineer specializing in scalable .NET backend architecture, with a strong aptitude for product strategy and business analysis. I bridge the gap between engineering and stakeholders to drive cross-functional projects from requirement gathering to successful enterprise deployment.
+                        <p class="text-light-50 lh-lg">
+                            Software Engineer specializing in scalable .NET backend architecture, RESTful API design, and enterprise system integrations. I bridge the gap between engineering teams and business stakeholders to turn complex requirements into secure, high-performance software.
                         </p>
-                        <div class="btn-con">
+                        <div class="btn-con d-flex gap-3 flex-wrap">
                             <a href="" class="main-btn cv-link">
                                 <span class="btn-text">Download CV</span>
                                 <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
+                            </a>
+                            <a href="#portfolio" class="main-btn control-link" onclick="document.querySelector('.control[data-id=\'portfolio\']').click();">
+                                <span class="btn-text">Explore Case Studies</span>
+                                <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
                             </a>
                         </div>
                     </div>
@@ -66,26 +93,26 @@
             </div>
         </div>
     </header>
-    <main>
 
+    <main>
         <!--Start About Section-->
         <section class="contai about" id="about">
             <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my status</span></h2>
+                <h2>About <span>me</span><span class="bg-text">PROFILE</span></h2>
             </div>
 
             <!--Information About Me Part-->
             <div class="container">
                 <div class="row">
-                    <!--Start First Coloumn-->
+                    <!--Start First Column-->
                     <div class="col-lg-6 col-md-8">
                         <div class="left-about">
                             <h4>Executive Summary</h4>
-                            <p style="text-align: justify;">
-                                My name is Abdelrahman H. Atta, and I am a Software Engineer and Technical Analyst with a proven track record of bridging the gap between complex business requirements and scalable architecture. Experienced in delivering enterprise systems by analyzing stakeholder needs, defining product scopes, and executing robust technical solutions. <br><br>
-                                I leverage a deep understanding of data structures, secure authentication systems, and system design to drive product strategy, optimize workflows, and deliver measurable business value. From mapping out complex domain models (such as e-commerce, ERP, and hotel services) to collaborating in rapid-prototyping hackathon environments, I excel at cross-functional communication. Whether I am managing project lifecycles, translating business logic into technical requirements, or engineering high-performance APIs, my ultimate goal is to transform organizational objectives into reliable, scalable software.
+                            <p>
+                                I am a Software Engineer and Technical Analyst with a proven track record of engineering scalable backend architecture and translating complex business domain logic into enterprise-grade software. <br><br>
+                                My expertise centers on <strong>C#, ASP.NET Core, Entity Framework Core, SQL Server, and RESTful API integrations</strong>. Beyond writing clean, maintainable code, I excel at requirements engineering, stakeholder discovery, and domain modeling. Whether engineering high-throughput API endpoints, integrating third-party hardware access gates, or optimizing enterprise database queries, I ensure technical solutions directly drive organizational growth and business value.
                             </p>
-                            <div class="btn-con">
+                            <div class="btn-con mt-4">
                                 <a href="" class="main-btn cv-link">
                                     <span class="btn-text">Download CV</span>
                                     <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
@@ -93,34 +120,15 @@
                             </div>
                         </div>
                     </div>
-                    <!--End First Coloumn-->
+                    <!--End First Column-->
 
-                    <!--Start Second Coloumn-->
+                    <!--Start Second Column-->
                     <div class="col-lg-3 col-md-4">
                         <div class="right-about-l">
                             <div class="about-item">
                                 <div class="about-text">
-                                    <p class="large-text">10+</p>
-                                    <p class="small-text">Projects <br> Completed</p>
-                                </div>
-                            </div>
-                            <div class="about-item">
-                                <div class="about-text">
-                                    <p class="large-text">1+</p>
-                                    <p class="small-text">Years of <br /> Experience</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Second Coloumn-->
-
-                    <!--Start Third Coloumn-->
-                    <div class="col-lg-3 col-md-4">
-                        <div class="right-about-r">
-                            <div class="about-item">
-                                <div class="about-text">
                                     <p class="large-text">3+</p>
-                                    <p class="small-text">Enterprise <br /> Systems</p>
+                                    <p class="small-text">Enterprise <br> Systems</p>
                                 </div>
                             </div>
                             <div class="about-item">
@@ -131,7 +139,26 @@
                             </div>
                         </div>
                     </div>
-                    <!--End Third Coloumn-->
+                    <!--End Second Column-->
+
+                    <!--Start Third Column-->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="right-about-r">
+                            <div class="about-item">
+                                <div class="about-text">
+                                    <p class="large-text">B.Sc.</p>
+                                    <p class="small-text">CS Honors <br /> 3.53 GPA</p>
+                                </div>
+                            </div>
+                            <div class="about-item">
+                                <div class="about-text">
+                                    <p class="large-text">100%</p>
+                                    <p class="small-text">Stakeholder <br /> Alignment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Third Column-->
 
                     <!-- Start My Skills Part -->
                     <div class="about-status mt-5">
@@ -139,36 +166,36 @@
                         
                         <div class="skills-container">
                             
-                            <!-- Backend Development -->
+                            <!-- Backend Engineering -->
                             <div class="skill-category">
                                 <h5 class="category-title">
                                     <i class="fas fa-server"></i>
-                                    Backend Engineering
+                                    Backend & Systems Engineering
                                 </h5>
                                 <div class="skills-grid">
                                     <div class="skill-card expert">
                                         <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
                                         <div class="skill-info">
-                                            <h6>C# & .NET Core</h6>
+                                            <h6>C# & ASP.NET Core</h6>
                                             <span class="skill-level expert">Expert</span>
                                         </div>
                                     </div>
                                     <div class="skill-card advanced">
                                         <div class="skill-icon"><i class="fas fa-database"></i></div>
                                         <div class="skill-info">
-                                            <h6>Entity Framework</h6>
+                                            <h6>Entity Framework Core</h6>
                                             <span class="skill-level advanced">Advanced</span>
                                         </div>
                                     </div>
                                     <div class="skill-card advanced">
                                         <div class="skill-icon"><i class="fas fa-database"></i></div>
                                         <div class="skill-info">
-                                            <h6>SQL Server</h6>
+                                            <h6>SQL Server & PostgreSQL</h6>
                                             <span class="skill-level advanced">Advanced</span>
                                         </div>
                                     </div>
                                     <div class="skill-card intermediate">
-                                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
                                         <div class="skill-info">
                                             <h6>RESTful APIs & Security</h6>
                                             <span class="skill-level intermediate">Intermediate</span>
@@ -177,17 +204,17 @@
                                 </div>
                             </div>
 
-                            <!-- Product & Project Management -->
+                            <!-- Product & Business Analysis -->
                             <div class="skill-category">
                                 <h5 class="category-title">
                                     <i class="fas fa-tasks"></i>
-                                    Product & Business Analysis
+                                    Product Strategy & Business Analysis
                                 </h5>
                                 <div class="skills-grid">
                                     <div class="skill-card advanced">
                                         <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
                                         <div class="skill-info">
-                                            <h6>Requirements Gathering</h6>
+                                            <h6>Requirements Engineering</h6>
                                             <span class="skill-level advanced">Advanced</span>
                                         </div>
                                     </div>
@@ -199,47 +226,40 @@
                                         </div>
                                     </div>
                                     <div class="skill-card intermediate">
-                                        <div class="skill-icon"><i class="fas fa-users"></i></div>
+                                        <div class="skill-icon"><i class="fas fa-comments"></i></div>
                                         <div class="skill-info">
-                                            <h6>Stakeholder Communication</h6>
-                                            <span class="skill-level intermediate">Intermediate</span>
-                                        </div>
-                                    </div>
-                                    <div class="skill-card intermediate">
-                                        <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
-                                        <div class="skill-info">
-                                            <h6>Domain Mapping</h6>
+                                            <h6>Stakeholder Management</h6>
                                             <span class="skill-level intermediate">Intermediate</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Architecture & Methodologies -->
+                            <!-- Architecture & System Design -->
                             <div class="skill-category">
                                 <h5 class="category-title">
                                     <i class="fas fa-layer-group"></i>
                                     Architecture & System Design
                                 </h5>
                                 <div class="skills-grid">
-                                    <div class="skill-card advanced">
+                                    <div class="skill-card intermediate">
                                         <div class="skill-icon"><i class="fas fa-cogs"></i></div>
                                         <div class="skill-info">
-                                            <h6>OOP & SOLID Principles</h6>
-                                            <span class="skill-level advanced">Advanced</span>
+                                            <h6>Clean Architecture & SOLID</h6>
+                                            <span class="skill-level intermediate">Intermediate</span>
                                         </div>
                                     </div>
                                     <div class="skill-card advanced">
-                                        <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+                                        <div class="skill-icon"><i class="fas fa-plug"></i></div>
                                         <div class="skill-info">
-                                            <h6>System Architecture</h6>
+                                            <h6>System Integration & Gateway</h6>
                                             <span class="skill-level advanced">Advanced</span>
                                         </div>
                                     </div>
                                     <div class="skill-card intermediate">
-                                        <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+                                        <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
                                         <div class="skill-info">
-                                            <h6>Design Patterns</h6>
+                                            <h6>API Security & Authentication</h6>
                                             <span class="skill-level intermediate">Intermediate</span>
                                         </div>
                                     </div>
@@ -252,6 +272,38 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Frontend & Ecosystem -->
+                            <div class="skill-category">
+                                <h5 class="category-title">
+                                    <i class="fas fa-laptop-code"></i>
+                                    Ecosystem & Web Development
+                                </h5>
+                                <div class="skills-grid">
+                                    <div class="skill-card intermediate">
+                                        <div class="skill-icon"><i class="fab fa-angular"></i></div>
+                                        <div class="skill-info">
+                                            <h6>Angular & Blazor</h6>
+                                            <span class="skill-level intermediate">Intermediate</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card intermediate">
+                                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                        <div class="skill-info">
+                                            <h6>Python</h6>
+                                            <span class="skill-level intermediate">Intermediate</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-card intermediate">
+                                        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                                        <div class="skill-info">
+                                            <h6>JavaScript (ES6+) & HTML/SCSS</h6>
+                                            <span class="skill-level intermediate">Intermediate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <!-- End My Skills Part -->
@@ -266,9 +318,12 @@
                                 <i class="fas fa-laptop-code"></i>
                             </div>
                             <p class="t1-duration">Oct 2025 - Present</p>
-                            <h5> Software Engineer & Technical Analyst <span> - TOT Platform, Cairo, Egypt </span></h5>
+                            <h5> Software Engineer <span> - TOT Platform, Cairo, Egypt </span></h5>
                             <p>
-                                Collaborated with stakeholders to define requirements and engineer full-stack features for enterprise HRMS and ERP systems, bridging business needs with scalable ASP.NET Core solutions. Designed system architecture and optimized data retrieval, significantly improving system scalability and streamlining internal workflows. Led API integrations (e.g., MDKHL Smart Parking) ensuring seamless cross-platform communication and solidifying enterprise data security.
+                                • Engineered scalable ASP.NET Core backend services and Entity Framework Core data mappings for enterprise HRMS and ERP platforms.<br>
+                                • Architected RESTful API integration logic for the MDKHL Smart Parking system, enabling automated real-time vehicle entry/exit validation and access logging.<br>
+                                • Conducted stakeholder discovery sessions to translate complex business workflows into technical requirements, domain models, and database schemas.<br>
+                                • Optimized database queries and index structures, improving API response performance across core enterprise modules.
                             </p>
                         </div>
 
@@ -280,7 +335,9 @@
                             <p class="t1-duration">March 2025 - August 2025</p>
                             <h5> Full Stack Software Engineering Program <span> - Information Technology Institute (ITI) </span></h5>
                             <p>
-                                Intensive software engineering specialization focusing on clean architecture, solid database design, and business logic implementation using .NET Core and Angular. Acted in cross-functional, rapid-prototyping environments (including competitive hackathons) to deliver functional, high-impact software solutions under strict deadlines while gathering and modeling user requirements.
+                                • Intensive 9-month software engineering specialization focused on Clean Architecture, SOLID principles, and enterprise database design.<br>
+                                • Built full-stack web applications combining ASP.NET Core Web API backends with Angular frontends.<br>
+                                • Collaborated in fast-paced hackathons to deliver functional prototypes under tight deadlines, acting as technical lead for domain modeling and requirement translation.
                             </p>
                         </div>
 
@@ -292,7 +349,8 @@
                             <p class="t1-duration">Jan 2025 - March 2025</p>
                             <h5> Technical Architecture & Systems Preparation <span> - Independent </span></h5>
                             <p>
-                                Dedicated extensive time to advancing core concepts in Data Structures, Algorithms, and .NET backend technologies. Mastered architectural foundations and cybersecurity principles essential for translating complex organizational objectives into high-performance, secure backend configurations.
+                                • Advanced core expertise in Data Structures, Advanced Algorithms, System Design, and .NET Core internals.<br>
+                                • Researched architectural patterns (CQRS, Repository Pattern) and security protocols (JWT, OAuth2, data encryption standards).
                             </p>
                         </div>
 
@@ -304,7 +362,7 @@
                             <p class="t1-duration">Oct 2023 - Dec 2024</p>
                             <h5> Mandatory Military Service <span> - Egypt </span></h5>
                             <p>
-                                Fulfilled national duty, developing strong discipline, adaptability, leadership, and cross-functional teamwork skills in high-pressure environments.
+                                • Fulfilled national duty, honing high-pressure decision-making, disciplined operational execution, and cross-functional leadership skills.
                             </p>
                         </div>
 
@@ -314,9 +372,9 @@
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <p class="t1-duration">Sep 2019 - Jun 2023</p>
-                            <h5> B.Sc. in Computer and Artificial Intelligence <span> - Helwan University </span></h5>
+                            <h5> B.Sc. in Computer Science & Artificial Intelligence <span> - Helwan University </span></h5>
                             <p>
-                                GPA: 3.53, Graduated with Honors. Built a solid foundation in Data Structures, Database Systems, Software Engineering, and Machine Learning. Executed full-stack projects translating academic concepts into functional applications.
+                                • GPA: 3.53 (Graduated with Honors). Rigorous coursework in Operating Systems, Database Management, Algorithms, Software Engineering, and Machine Learning.
                             </p>
                         </div>
                     </div>
@@ -327,15 +385,15 @@
         <!-- Portfolio Section -->
         <section class="contai" id="portfolio">
             <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+                <h2>My <span>Portfolio</span><span class="bg-text">WORK</span></h2>
             </div>
             <p class="port-text">
-                Showcasing enterprise solutions, business logic integrations, and technical engineering projects.
+                Showcasing enterprise platforms, integration architecture, and engineering projects.
             </p>
 
             <div class="container">
                 <!-- Portfolio Carousel -->
-                <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="portfolioCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
                     <div class="carousel-indicators custom-indicators">
                         <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -352,16 +410,16 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/HRMS_Image.jpg" alt="HRMS Project" />
+                                            <img src="img/HRMS_Image.jpg" alt="HRMS Platform" />
                                         </div>
                                         <div class="hover-items">
                                             <h3>HRMS Platform</h3>
-                                            <p>Streamlined employee workflows & data mapping.</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Architecture | C# | Blazor</em></small>
+                                            <p>Enterprise workforce management & payroll mapping.</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>ASP.NET Core | EF Core | Blazor</em></small>
                                             <div class="icons">
-                                                <span class="icon" title="Private Enterprise Project">
-                                                    <i class="fas fa-lock"></i>
-                                                </span>
+                                                <button class="case-study-btn" data-bs-toggle="modal" data-bs-target="#hrmsModal">
+                                                    <i class="fas fa-file-alt"></i> Case Study
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -375,12 +433,12 @@
                                         </div>
                                         <div class="hover-items">
                                             <h3>Enterprise ERP</h3>
-                                            <p>Optimized business resource planning & operations.</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Requirements | EF Core | SQL</em></small>
+                                            <p>Resource planning & domain workflow system.</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>Clean Arch | C# | SQL Server</em></small>
                                             <div class="icons">
-                                                <span class="icon" title="Private Enterprise Project">
-                                                    <i class="fas fa-lock"></i>
-                                                </span>
+                                                <button class="case-study-btn" data-bs-toggle="modal" data-bs-target="#erpModal">
+                                                    <i class="fas fa-file-alt"></i> Case Study
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -390,16 +448,16 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/Smart_Parking_image.png" alt="Smart Parking (MDKHL)" />
+                                            <img src="img/smart_parking.png" alt="Smart Parking (MDKHL)" />
                                         </div>
                                         <div class="hover-items">
-                                            <h3>Smart Parking Integration</h3>
-                                            <p>Automated API logic for entry/exit systems.</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>System Design | REST APIs | C#</em></small>
+                                            <h3>MDKHL Smart Parking</h3>
+                                            <p>Real-time vehicle access & REST API integration.</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>API Gateways | C# | Security</em></small>
                                             <div class="icons">
-                                                <span class="icon" title="Private Enterprise Project">
-                                                    <i class="fas fa-lock"></i>
-                                                </span>
+                                                <button class="case-study-btn" data-bs-toggle="modal" data-bs-target="#parkingModal">
+                                                    <i class="fas fa-file-alt"></i> Case Study
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -414,15 +472,15 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/port1.jpg" alt="Akelny Frontend Project" />
+                                            <img src="img/akelny-food.jpg" alt="Akelny Platform" />
                                         </div>
                                         <div class="hover-items">
-                                            <h3>Akelny</h3>
-                                            <p>Restaurant Management System</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Angular | .NET Web API | JWT</em></small>
+                                            <h3>Akelny Platform</h3>
+                                            <p>Restaurant Management & Food Delivery API</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>Angular | .NET Web API | JWT</em></small>
                                             <div class="icons">
-                                                <a href="https://akelny-front.vercel.app/" target="_blank" class="icon">
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href="https://akelny-front.vercel.app/" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                                 </a>
                                             </div>
                                         </div>
@@ -433,15 +491,15 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/port2.jpg" alt="Cardio Vision Project" />
+                                            <img src="img/cardiac-risk.jpg" alt="Cardio Vision Project" />
                                         </div>
                                         <div class="hover-items">
                                             <h3>Cardio Vision</h3>
-                                            <p>Medical Imaging Application</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Python | MLP Classifier | ML</em></small>
+                                            <p>Medical Risk Prediction & ML Classifier</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>Python | MLP Classifier | Scikit-Learn</em></small>
                                             <div class="icons">
-                                                <a href="https://cardio-vision.netlify.app/" target="_blank" class="icon">
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href="https://cardio-vision.netlify.app/" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                                 </a>
                                             </div>
                                         </div>
@@ -452,15 +510,15 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/port3.jpg" alt="Exam System Project" />
+                                            <img src="img/online-exam.jpg" alt="Exam System Project" />
                                         </div>
                                         <div class="hover-items">
                                             <h3>Exam System</h3>
-                                            <p>Educational Assessment Platform</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>HTML | CSS | Vanilla JS</em></small>
+                                            <p>Automated Educational Assessment</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>HTML5 | CSS3 | Vanilla JS</em></small>
                                             <div class="icons">
-                                                <a href="https://ahmedabdeen15.github.io/Exam-System/" target="_blank" class="icon">
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href="https://ahmedabdeen15.github.io/Exam-System/" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                                 </a>
                                             </div>
                                         </div>
@@ -469,22 +527,22 @@
                             </div>
                         </div>
 
-                        <!-- Third Slide - Front-End & Templating -->
+                        <!-- Third Slide - Front-End & Web Solutions -->
                         <div class="carousel-item">
                             <div class="row">
                                 <!-- Project 7: Pet Adoption -->
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/port4.jpg" alt="Pet Adoption Platform" />
+                                            <img src="img/pets.jpg" alt="Pet Adoption Platform" />
                                         </div>
                                         <div class="hover-items">
                                             <h3>Pet Adoption</h3>
-                                            <p>Animal Welfare Platform UI</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Frontend | Bootstrap | APIs</em></small>
+                                            <p>Animal Welfare Platform Interface</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>Bootstrap | REST API | JS</em></small>
                                             <div class="icons">
-                                                <a href="https://abdelrahman-2222.github.io/pet-adoption-platform/" target="_blank" class="icon">
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href="https://abdelrahman-2222.github.io/pet-adoption-platform/" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                                 </a>
                                             </div>
                                         </div>
@@ -495,15 +553,15 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/port5.jpg" alt="Future Processing Blog" />
+                                            <img src="img/port5.jpg" alt="Processing Blog" />
                                         </div>
                                         <div class="hover-items">
                                             <h3>Processing Blog</h3>
-                                            <p>Tech Blog Platform UI</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Web Template | UI/UX</em></small>
+                                            <p>Tech Publishing UI Template</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>HTML5 | Responsive SCSS</em></small>
                                             <div class="icons">
-                                                <a href="https://abdelrahman-2222.github.io/future-processing-blog/" target="_blank" class="icon">
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href="https://abdelrahman-2222.github.io/future-processing-blog/" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                                 </a>
                                             </div>
                                         </div>
@@ -514,15 +572,15 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="portfolio-item">
                                         <div class="image">
-                                            <img src="img/port6.jpg" alt="Bootstrap Template" />
+                                            <img src="img/port6.jpg" alt="Responsive UI" />
                                         </div>
                                         <div class="hover-items">
                                             <h3>Responsive UI</h3>
-                                            <p>Component-Driven Web Template</p>
-                                            <small style="color: #b1b493; margin-bottom: 10px; display: block;"><em>Bootstrap | SCSS | HTML5</em></small>
+                                            <p>Component-Driven Web Layout</p>
+                                            <small style="color: #64748b; margin-bottom: 12px; display: block;"><em>Bootstrap 5 | SCSS</em></small>
                                             <div class="icons">
-                                                <a href="https://abdelrahman-2222.github.io/Bootstrap_template_1/" target="_blank" class="icon">
-                                                    <i class="fas fa-external-link-alt"></i>
+                                                <a href="https://abdelrahman-2222.github.io/Bootstrap_template_1/" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                                                    <i class="fas fa-external-link-alt"></i> Live Demo
                                                 </a>
                                             </div>
                                         </div>
@@ -554,17 +612,17 @@
         <section class="contai contact" id="contact">
             <div class="main-title">
                 <h2>
-                    Contact <span>Me</span><span class="bg-text">My Social</span>
+                    Contact <span>Me</span><span class="bg-text">CONNECT</span>
                 </h2>
             </div>
             <div class="container">
                 <div class="row">
-                    <!--Start First Coloumn-->
+                    <!--Start First Column-->
                     <div class="col-lg-6 col-md-8">
                         <div class="left-contact">
-                            <h4>Let's Connect</h4>
+                            <h4>Let's Build Together</h4>
                             <p>
-                                Whether you are looking for technical engineering expertise, project management, or a business analyst to bridge the gap—feel free to reach out.
+                                Whether you require technical backend engineering, solutions consulting, or technical product analysis—feel free to reach out. I look forward to discussing how I can add value to your team.
                             </p>
                             <div class="contact-info">
                                 <div class="contact-item">
@@ -584,9 +642,9 @@
                                 <div class="contact-item">
                                     <div class="icon">
                                         <i class="fas fa-user-graduate"></i>
-                                        <span>Education</span>
+                                        <span>Degree</span>
                                     </div>
-                                    <p><span>Helwan University, Cairo</span></p>
+                                    <p><span>B.Sc. Computer Science (Honors)</span></p>
                                 </div>
                                 <div class="contact-item">
                                     <div class="icon">
@@ -600,21 +658,21 @@
                                         <i class="fas fa-globe-africa"></i>
                                         <span class="lang">Languages</span>
                                     </div>
-                                    <p><span>Arabic, English</span></p>
+                                    <p><span>Arabic (Native), English (Fluent), German (Beginner)</span></p>
                                 </div>
                             </div>
                             <div class="contact-icons">
                                 <div class="contact-icon">
-                                    <a href="https://www.facebook.com/abdelrahman.atta.5243" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="https://twitter.com/Abdelra52063875" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                                    <a href="https://github.com/Abdelrahman-2222" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://www.linkedin.com/in/abdelrahman-h-atta/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://github.com/Abdelrahman-2222" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/abdelrahman-h-atta/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://twitter.com/Abdelra52063875" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/abdelrahman.atta.5243" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!--Start Second Coloumn-->
+                    <!--Start Second Column-->
                     <div class="col-lg-6 col-md-8">
                         <div class="right-contact">
                             <form action="" class="contact-form" id="contactForm">
@@ -628,11 +686,11 @@
                                 <div class="input-control">
                                     <textarea name="message" id="emailMessage" cols="15" rows="8" placeholder="Message Here..."></textarea>
                                 </div>
-                                <div class="submit-btn">
-                                    <a href="#" id="sendEmailBtn" class="main-btn">
+                                <div class="submit-btn gap-3 flex-wrap">
+                                    <button type="submit" id="sendEmailBtn" class="main-btn border-0 style-none">
                                         <span class="btn-text">Send Message</span>
                                         <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
-                                    </a>
+                                    </button>
                                     <a href="" class="main-btn cv-link">
                                         <span class="btn-text">Download CV</span>
                                         <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
@@ -650,22 +708,162 @@
 
     <!--Controls Section-->
     <div class="controls">
-        <div class="control active-btn" data-id="home">
+        <div class="control active-btn" data-id="home" title="Home">
             <i class="fa-solid fa-home"></i>
         </div>
-        <div class="control" data-id="about">
+        <div class="control" data-id="about" title="About Me">
             <i class="fa-solid fa-user"></i>
         </div>
-        <div class="control" data-id="portfolio">
+        <div class="control" data-id="portfolio" title="Portfolio">
             <i class="fas fa-briefcase"></i>
         </div>
-        <div class="control" data-id="contact">
+        <div class="control" data-id="contact" title="Contact">
             <i class="fa-solid fa-envelope-open"></i>
         </div>
     </div>
 
-    <div class="theme-btn">
+    <div class="theme-btn" title="Toggle Dark/Light Mode">
         <i class="fa-solid fa-circle-half-stroke"></i>
+    </div>
+
+    <!-- Case Study Modal 1: HRMS -->
+    <div class="modal fade" id="hrmsModal" tabindex="-1" aria-labelledby="hrmsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content case-study-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hrmsModalLabel"><i class="fas fa-users-cog me-2"></i> HRMS Platform Case Study</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <span class="pill-badge">Enterprise Platform</span>
+                        <span class="pill-badge">ASP.NET Core</span>
+                        <span class="pill-badge">Entity Framework Core</span>
+                        <span class="pill-badge">Blazor</span>
+                    </div>
+
+                    <h6 class="modal-section-title"><i class="fas fa-bullseye"></i> Business Challenge</h6>
+                    <p>
+                        The organization required an integrated Human Resource Management System to replace manual recordkeeping, automate employee onboarding workflows, track attendance, and process complex organizational hierarchy data.
+                    </p>
+
+                    <h6 class="modal-section-title"><i class="fas fa-cogs"></i> Technical Execution & Architecture</h6>
+                    <div class="architecture-box">
+                        <h6>Backend Architecture: ASP.NET Core & EF Core</h6>
+                        <ul>
+                            <li>Designed domain entities for Employee Records, Organizational Units, Leaves, and Payroll Mappings.</li>
+                            <li>Implemented Repository Pattern & Dependency Injection to maintain strict separation of concerns.</li>
+                            <li>Optimized LINQ database queries, reducing data payload retrieval overhead for reporting dashboards.</li>
+                        </ul>
+                    </div>
+
+                    <h6 class="modal-section-title"><i class="fas fa-chart-line"></i> Business Impact</h6>
+                    <ul>
+                        <li>Streamlined employee record accessibility across departments.</li>
+                        <li>Automated leave approval and attendance reporting logic.</li>
+                        <li>Reduced manual data reconciliation effort by over 40%.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn" data-bs-dismiss="modal">
+                        <span class="btn-text">Close Case Study</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Modal 2: ERP -->
+    <div class="modal fade" id="erpModal" tabindex="-1" aria-labelledby="erpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content case-study-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="erpModalLabel"><i class="fas fa-boxes me-2"></i> Enterprise ERP Platform Case Study</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <span class="pill-badge">Enterprise ERP</span>
+                        <span class="pill-badge">C# / .NET Core</span>
+                        <span class="pill-badge">SQL Server</span>
+                        <span class="pill-badge">Requirements Engineering</span>
+                    </div>
+
+                    <h6 class="modal-section-title"><i class="fas fa-bullseye"></i> Business Challenge</h6>
+                    <p>
+                        Managing enterprise resource planning required unified database schemas, transaction integrity, and robust business logic to orchestrate cross-departmental operations efficiently.
+                    </p>
+
+                    <h6 class="modal-section-title"><i class="fas fa-cogs"></i> Technical Execution & Architecture</h6>
+                    <div class="architecture-box">
+                        <h6>System & Database Design</h6>
+                        <ul>
+                            <li>Mapped complex domain models for inventory, procurement, and financial reporting modules.</li>
+                            <li>Designed normalized relational SQL database schemas with indexed keys for fast query execution.</li>
+                            <li>Enforced strict data integrity validation rules at the application layer.</li>
+                        </ul>
+                    </div>
+
+                    <h6 class="modal-section-title"><i class="fas fa-chart-line"></i> Business Impact</h6>
+                    <ul>
+                        <li>Centralized operational data into a single source of truth.</li>
+                        <li>Eliminated data silos between management and operational teams.</li>
+                        <li>Improved resource allocation efficiency.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn" data-bs-dismiss="modal">
+                        <span class="btn-text">Close Case Study</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study Modal 3: Smart Parking -->
+    <div class="modal fade" id="parkingModal" tabindex="-1" aria-labelledby="parkingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content case-study-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="parkingModalLabel"><i class="fas fa-parking me-2"></i> MDKHL Smart Parking Integration Case Study</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <span class="pill-badge">IoT & Hardware API</span>
+                        <span class="pill-badge">RESTful APIs</span>
+                        <span class="pill-badge">C# / .NET</span>
+                        <span class="pill-badge">Real-Time Access Control</span>
+                    </div>
+
+                    <h6 class="modal-section-title"><i class="fas fa-bullseye"></i> Business Challenge</h6>
+                    <p>
+                        Facility management needed an automated entry/exit gate control system that communicates seamlessly with hardware sensors, validates vehicle access authorization in real time, and logs entry transactions securely.
+                    </p>
+
+                    <h6 class="modal-section-title"><i class="fas fa-cogs"></i> Technical Execution & Architecture</h6>
+                    <div class="architecture-box">
+                        <h6>API Integration & Gateway Security</h6>
+                        <ul>
+                            <li>Engineered RESTful API endpoints consumed by gate controller hardware for immediate access authorization checks.</li>
+                            <li>Implemented transaction logging and error handling for network latency resilience.</li>
+                            <li>Secured API endpoints with token authentication to prevent unauthorized barrier trigger requests.</li>
+                        </ul>
+                    </div>
+
+                    <h6 class="modal-section-title"><i class="fas fa-chart-line"></i> Business Impact</h6>
+                    <ul>
+                        <li>Automated vehicle entry/exit flow, reducing gate congestion.</li>
+                        <li>Delivered real-time occupancy monitoring and audit logs for facility management.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn" data-bs-dismiss="modal">
+                        <span class="btn-text">Close Case Study</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="js/bootstrap.bundle.min.js"></script>

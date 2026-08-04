@@ -1,12 +1,69 @@
 (function () {
+  function navigateToSection(targetId) {
+    const targetSection = document.getElementById(targetId);
+    if (!targetSection) return;
+
+    // Update active control button
+    document.querySelectorAll(".controls .control").forEach((btn) => {
+      if (btn.dataset.id === targetId) {
+        btn.classList.add("active-btn");
+      } else {
+        btn.classList.remove("active-btn");
+      }
+    });
+
+    // Remove active class ONLY from main sections, never from carousel items!
+    document.querySelectorAll(".contai.active").forEach((section) => {
+      section.classList.remove("active");
+    });
+
+    // Activate the target section
+    targetSection.classList.add("active");
+
+    // Recalculate layout & refresh Carousel when switching to portfolio section
+    if (targetId === "portfolio") {
+      const carouselEl = document.getElementById("portfolioCarousel");
+      if (carouselEl) {
+        // Ensure first slide is active if no slide is active
+        const slides = carouselEl.querySelectorAll(".carousel-item");
+        const hasActiveSlide = carouselEl.querySelector(".carousel-item.active");
+        if (!hasActiveSlide && slides.length > 0) {
+          slides[0].classList.add("active");
+        }
+      }
+      setTimeout(() => {
+        window.dispatchEvent(new Event("resize"));
+        if (carouselEl && window.bootstrap && window.bootstrap.Carousel) {
+          const instance = window.bootstrap.Carousel.getOrCreateInstance(carouselEl);
+          if (instance) instance.to(0);
+        }
+      }, 50);
+    }
+  }
+
   [...document.querySelectorAll(".control")].forEach((button) => {
     button.addEventListener("click", function () {
-      document.querySelector(".active-btn").classList.remove("active-btn");
-      this.classList.add("active-btn");
-      document.querySelector(".active").classList.remove("active");
-      document.getElementById(button.dataset.id).classList.add("active");
+      const sectionId = this.dataset.id;
+      navigateToSection(sectionId);
+      window.location.hash = sectionId;
     });
   });
+
+  // Handle URL Hash on load & back/forward navigation
+  window.addEventListener("hashchange", function () {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      navigateToSection(hash);
+    }
+  });
+
+  window.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      navigateToSection(hash);
+    }
+  });
+
   document.querySelector(".theme-btn").addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
   });
@@ -20,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
     sendEmailBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("userName").value;
-      const email = document.getElementById("userEmail").value;
-      const subject = document.getElementById("emailSubject").value;
-      const message = document.getElementById("emailMessage").value;
+      const name = document.getElementById("userName").value.trim();
+      const email = document.getElementById("userEmail").value.trim();
+      const subject = document.getElementById("emailSubject").value.trim();
+      const message = document.getElementById("emailMessage").value.trim();
 
       if (!name || !email || !subject || !message) {
         displayMessage("Please fill in all fields", "error");
@@ -36,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      displayMessage("Sending...", "info");
+      displayMessage("Sending message...", "info");
 
       fetch("/api/send-email", {
         method: "POST",
@@ -62,21 +119,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function displayMessage(msg, type) {
-    // 1. Find the container we added to the HTML
     const container = document.getElementById('toast-container');
     if (!container) return;
 
-    // 2. Create the toast element
     const toast = document.createElement('div');
     toast.className = `toast-message toast-${type}`;
     
-    // 3. Add an icon based on the message type (using FontAwesome which you already have)
     let icon = '';
     if (type === 'success') icon = '<i class="fa-solid fa-circle-check"></i>';
     if (type === 'error') icon = '<i class="fa-solid fa-circle-exclamation"></i>';
     if (type === 'info') icon = '<i class="fa-solid fa-circle-info"></i>';
 
-    // 4. Inject the HTML into the toast
     toast.innerHTML = `
         <div style="display: flex; align-items: center; gap: 12px;">
             ${icon}
@@ -84,19 +137,15 @@ function displayMessage(msg, type) {
         </div>
     `;
 
-    // 5. Add the toast to the screen
     container.appendChild(toast);
 
-    // 6. Automatically remove the toast after 4 seconds
     setTimeout(() => {
         toast.classList.add('fade-out');
-        // Wait for the fade-out animation to finish before removing from DOM
         toast.addEventListener('animationend', () => {
             toast.remove();
         });
     }, 4000);
 }
-
 
 // Get country from cookie
 function getCookie(name) {
@@ -107,18 +156,12 @@ function getCookie(name) {
 
 // Function to set CV links based on region
 function setCVLinks(region) {
-  let cvFileName;
-
-  if (region === "EG") {displayMessage
-    // Egyptian CV - for users accessing from Egypt
-    cvFileName = "https://drive.google.com/file/d/1bqFnxH0GFhKA_jcCCd7t3zXwJvgayzh4/view?usp=sharing";
-  } else {
-    // International CV - for users accessing from anywhere outside Egypt
-    cvFileName = "https://drive.google.com/file/d/1bqFnxH0GFhKA_jcCCd7t3zXwJvgayzh4/view?usp=sharing";
-  }
+  let cvFileName = "https://drive.google.com/file/d/1bqFnxH0GFhKA_jcCCd7t3zXwJvgayzh4/view?usp=sharing";
 
   document.querySelectorAll('.cv-link').forEach(link => {
     link.href = cvFileName;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
   });
 }
 
@@ -128,7 +171,6 @@ let userRegion = getCookie("user-region");
 if (userRegion) {
   setCVLinks(userRegion);
 } else {
-  // If no cookie, fetch from API
   fetch('/api/location')
     .then(res => res.json())
     .then(data => {
@@ -136,6 +178,7 @@ if (userRegion) {
     })
     .catch(error => {
       console.error('Error fetching location:', error);
-      setCVLinks('INTERNATIONAL'); // Fallback to international CV
+      setCVLinks('INTERNATIONAL');
     });
 }
+
